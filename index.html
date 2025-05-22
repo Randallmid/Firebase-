@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud Usuarios</title>
+    <!-- Firebase App (compat) --> <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js">
+    </script> <!-- Firebase Realtime Database (compat) --> 
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+     <script defer src="app.js"></script>
+     <style>
+        body{
+            font-family: sans-serif;
+            margin: 2em;
+        }
+        input, button{
+            margin: 0.5em ;
+            display: block;
+        }
+        label{
+            margin-top: 1em;
+            font-weight: bold;
+        }
+     </style>
+</head>
+
+
+<body>
+    <h1>Gestion de usuarios (CRUD)</h1>
+    <label>ID del Usuario</label>
+    <input type="text" id="userId">
+    <label>Nombre</label>
+    <input type="text" id="nombre">
+    <label>Email</label>
+    <input type="email" id="email">
+
+    <button onclick="setCrearusuario()">Crear Usuario</button>    
+    <button onclick="leerTodosLosUsuario()">Leer todos los usuarios</button>
+
+    <h3>Resultado:</h3>
+    <pre id="resultado"></pre>
+</body>
+</html>
